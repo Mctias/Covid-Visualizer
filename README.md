@@ -1,5 +1,7 @@
 # Covid-Visualizer
 
+https://mctias.github.io/Covid-Visualizer/
+
 ## Disclaimer
 
 This project is made for fun and learning purposes and no profit has or will be made. The design for this visualization isn't original and I basically only wanted to see if I could remake an existing application in d3.js. 
