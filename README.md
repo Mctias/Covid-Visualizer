@@ -13,7 +13,7 @@ This application visualizes the latest Covid-19 data in the world using a chorop
 
 ## Inspiration
 
-The idea for this comes from https://www.covidvisualizer.com/ which made a very cool visualization for the current Covid-19 data. I saw this and wanted to see if I could recreate it using [d3.js] (https://d3js.org/).
+The idea for this comes from https://www.covidvisualizer.com/ which made a very cool visualization for the current Covid-19 data. I saw this and wanted to see if I could recreate it using d3.js (https://d3js.org/).
 But all credit to the original for coming up with the idea(s).
 
 ## Tools
