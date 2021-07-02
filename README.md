@@ -16,7 +16,7 @@ But all credit to the original for coming up with the idea(s).
 
 ## Tools
 
-This visualization of Covid-19 data is made with HTML, CSS, JavaScript, jQery, and of course the library d3.js, which is a great tool for creating modern visualizations for the web. 
+This visualization of Covid-19 data is made with HTML, CSS, JavaScript, jQuery, and of course the library d3.js, which is a great tool for creating modern visualizations for the web. 
 
 ## Credit
 
