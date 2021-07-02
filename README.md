@@ -1,4 +1,4 @@
-# Covid-Visualizer
+# Covid Visualizer
 
 https://mctias.github.io/Covid-Visualizer/
 
