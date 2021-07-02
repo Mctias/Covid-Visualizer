@@ -1,9 +1,13 @@
 # Covid-Visualizer
 
+## Disclaimer
+
+This project is made for fun and learning purposes and no profit has or will be made. The design for this visualization isn't original and I basically only wanted to see if I could remake an existing application in d3.js. 
+
 ## Description 
 
 This application visualizes the latest Covid-19 data in the world using a choropleth map on a 3D-globe. Some additional visualization methods are used as well for complementary purposes. 
-This project is made for fun and learning purposes and no profit has or will be made. 
+
 
 ## Inspiration
 
