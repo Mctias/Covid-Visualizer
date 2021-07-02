@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"> 
+	<meta name="viewport" content="width=1000, user-scalable=0;" />
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<script src="https://d3js.org/d3-color.v1.min.js"></script>
+	<script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
+	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+	<script src="https://d3js.org/topojson.v2.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+	<link rel="stylesheet" href="css/styles.css">
+
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	
+
+	<title>Covid-19 data visualization</title>
+</head>
+
+<body onLoad="fetchData();">
+
+	<div class="col-md-12">
+	    <div class="info">
+	      <i class="icon-info-sign"></i>
+	      <span class="extra-info">
+	        This project is inspired by <a href="https://www.covidvisualizer.com/">https://www.covidvisualizer.com/</a> as I <br> wanted to try to recreate it using <a href="https://d3js.org/">d3.js</a>.
+	        <br><br> The data is fetched from <a href="https://covid19api.com/">https://covid19api.com/</a> which <br> is updated a couple of times a day.
+	        <br><br> Some of the data is a bit weird, for example it says Sweden has a lot more active cases than it actually does.
+	      </span>
+	  </div>
+	</div>
+	
+	<div id="particles-js"></div>
+	<div id = "globe" style = "width: 100%; z-index: 0;"></div>
+	<div id ="menu-btn">
+		<button id="left-menu-btn" onclick="openNav()"><p class="arrow right"></p></button>
+	</div>
+	<!-- Use any element to open/show the overlay navigation menu -->
+	
+
+	<div id="header"> 
+		<h1 style = "color: #ebecf0;"> COVID-19 Visualization </h1>
+		<p style = "color: #ebecf0;"> Click a country for more COVID-19 related data or use the menu to change variable visualized</p>
+	</div>
+
+
+	<div id="myNav" class="overlay">
+
+  		<!-- Button to close the overlay navigation -->
+  		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		
+  		<!-- Overlay content -->
+  		<div class="overlay-content">
+  		  <a style= "overflow: hidden; display: inline-block; white-space: nowrap;">
+  			Total cases: <p id=total-cases style ="color:white;"></p> </a>
+  		  <a style= "overflow: hidden; display: inline-block; white-space: nowrap;">
+  		  	Active cases: <p id=active-cases style = "color: #CCCC00;"></p> </a>
+  		  <a style= "overflow: hidden; display: inline-block; white-space: nowrap;">
+  		  	Total deaths: <p id=total-deaths style = "color: #fc0000;"></p> </a>
+  		  <a style= "overflow: hidden; display: inline-block; white-space: nowrap;">
+  		  	Total recovered: <p id=total-recovered style = "color: #149414;"></p> </a>
+  		</div>		
+	</div>
+
+	<footer id=footer>
+		<p id=date-updated style="color: #ebecf0;">The global data was updated: </p>
+	</footer>
+
+	<div id="dialog" title="" hidden="true">
+		<div id="donut-chart"></div>
+  		<a style= "overflow: hidden; display: inline-block; white-space: nowrap;">
+  			Active cases: <p id=popup-active-cases style ="color:#CCCC00;"></p> </a>
+
+  		<a style= "overflow: hidden; display: inline-block; white-space: nowrap;">
+  			Total deaths: <p id=popup-total-deaths style ="color:#fc0000;"></p> </a>
+
+  		<a style= "overflow: hidden; display: inline-block; white-space: nowrap;">
+  			Total recoveries: <p id=popup-total-recovered style ="color:#149414;"></p> </a>
+
+  		<a style= "overflow: hidden; display: inline-block; white-space: nowrap;">
+  			Total cases: <p id=popup-total-cases style ="color:white;"></p> </a>
+
+  		<a><p id="popup-date"></p></a>
+  		
+	</div>
+
+
+	<div class="tooltip"></div>
+
+
+
+	<script src ="scripts/menu.js"></script>
+	<script src="scripts/particles.js-master/particles.js"></script>
+	<script src="scripts/loadParticles.js"></script>
+	<script src="scripts/data_loader.js"></script>
+	<script src="scripts/globe.js"></script>
+	<script src="scripts/donut.js"></script>
+
+</body>
+</html>
